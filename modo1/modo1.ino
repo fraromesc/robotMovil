@@ -32,6 +32,10 @@ void setup(){
   pinMode (IN4, OUTPUT);
   pinMode (ENA, OUTPUT);
   pinMode (ENB, OUTPUT);
+  pinMode(echoDer, INPUT); 
+  pinMode(trigDer, OUTPUT); 
+  pinMode(echoIzq, INPUT); 
+  pinMode(trigIzq, OUTPUT); 
   Serial.begin(9600); 
   //establecer direcciones
   digitalWrite(IN1, HIGH);
@@ -91,9 +95,9 @@ void loop() {
   
   //Serial.print(distanciaUS(trigDer, echoDer)); 
   //Serial.print("\t"); 
-  Serial.println(distanciaUS(trigDer, echoDer)); 
- // Serial.print("\t"); 
-  //Serial.println(ref); 
+  Serial.print(distanciaUS(trigDer, echoDer)); 
+  Serial.print("\t"); 
+  Serial.println(distanciaUS(trigIzq, echoIzq)); 
   
   
    
